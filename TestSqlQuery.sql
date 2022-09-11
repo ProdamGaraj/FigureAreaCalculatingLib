@@ -105,5 +105,6 @@ INSERT INTO [dbo].[ProductCategory]
 GO
 
 select p.Name, c.Name
-from Products as p left join ProductCategory as pc on(p.Id=pc.ProductId) left join Categories as c on(pc.CategoryId = c.Id) 
-where p.Id=pc.ProductId
+from Products as p 
+left join ProductCategory as pc on(p.Id=pc.ProductId)
+left join Categories as c on(pc.CategoryId = c.Id) 
